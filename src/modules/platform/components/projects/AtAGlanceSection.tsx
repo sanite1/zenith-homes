@@ -19,9 +19,9 @@ const AtAGlanceSection = () => (
           All titles documented · {SITE_CONTACT.rc}
         </div>
       </div>
-      <div className="grid grid-cols-1 gap-[22px] md:grid-cols-3">
+      <div className="grid grid-cols-1 gap-[22px] sm:grid-cols-2 lg:grid-cols-4">
         {PROJECT_CHAPTERS.map((chapter) => {
-          const flagship = chapter.id === "kado";
+          const flagship = chapter.flagship;
           return (
             <article
               key={chapter.id}

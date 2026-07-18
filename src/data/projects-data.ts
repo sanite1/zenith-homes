@@ -1,5 +1,5 @@
 export interface ProjectChapter {
-  id: "guzape" | "kado" | "idu";
+  id: "jahi" | "guzape" | "kado" | "idu";
   chapter: string;
   anchorLabel: string;
   sunLabel: string;
@@ -8,6 +8,7 @@ export interface ProjectChapter {
   description: string;
   tags: string[];
   badge: string;
+  flagship: boolean;
   glance: {
     heading: string;
     blurb: string;
@@ -17,9 +18,32 @@ export interface ProjectChapter {
 
 export const PROJECT_CHAPTERS: ProjectChapter[] = [
   {
+    id: "jahi",
+    chapter: "CHAPTER 01 · JAHI",
+    anchorLabel: "01 · JAHI · NOW SELLING",
+    sunLabel: "DAYBREAK",
+    name: "The Dream Home",
+    tagline: "Four 4-bed terraces, rising with the new day.",
+    description:
+      "An exclusive row of four terraces now rising in Jahi, Abuja: four bedrooms each, bold modern lines, warm timber accents and light-washed facades. Buy as a shell carcass and finish it your way, or take it fully finished and simply move in.",
+    tags: [
+      "4 units only",
+      "4-bed terraces",
+      "Shell or fully finished",
+      "Instalment plans",
+    ],
+    badge: "NOW SELLING",
+    flagship: true,
+    glance: {
+      heading: "01 · JAHI",
+      blurb: "4-bed terraces · now selling · from ₦230M",
+      ctaLabel: "BOOK A VIEWING →",
+    },
+  },
+  {
     id: "guzape",
-    chapter: "CHAPTER 01 · GUZAPE",
-    anchorLabel: "01 · GUZAPE · DELIVERED",
+    chapter: "CHAPTER 02 · GUZAPE",
+    anchorLabel: "02 · GUZAPE · DELIVERED",
     sunLabel: "SUN AT 100%",
     name: "Zenith Terraces",
     tagline: "Three floors of light, delivered and lived in.",
@@ -27,16 +51,17 @@ export const PROJECT_CHAPTERS: ProjectChapter[] = [
       "Our first light: contemporary terraces in Guzape with double-volume living, panoramic openings and finishes that survive the walkthrough test. Handed over in 2025, every key collected, every family home.",
     tags: ["4-bed terraces", "3 floors", "Balconies + BQ", "Gated street"],
     badge: "SUN RISEN · DELIVERED 2025",
+    flagship: false,
     glance: {
-      heading: "01 · GUZAPE",
+      heading: "02 · GUZAPE",
       blurb: "4-bed terraces · delivered 2025 · fully occupied",
       ctaLabel: "JOIN THE WAITLIST →",
     },
   },
   {
     id: "kado",
-    chapter: "CHAPTER 02 · KADO",
-    anchorLabel: "02 · KADO · NOW SELLING",
+    chapter: "CHAPTER 03 · KADO",
+    anchorLabel: "03 · KADO · NOW SELLING",
     sunLabel: "HIGH NOON",
     name: "Kado Homes",
     tagline: "Refined city apartments at the sun's height.",
@@ -44,16 +69,17 @@ export const PROJECT_CHAPTERS: ProjectChapter[] = [
       "One to three bedroom apartments with designer kitchens, marble-calm bathrooms and smart-home control as standard. Open-plan living drawn around Abuja light. Selling now, finishing soon.",
     tags: ["1–3 bedrooms", "Smart-home", "Designer kitchens", "Instalment plans"],
     badge: "NOW SELLING",
+    flagship: true,
     glance: {
-      heading: "02 · KADO",
+      heading: "03 · KADO",
       blurb: "1–3 bed apartments · now selling · instalment plans",
       ctaLabel: "BOOK A VIEWING →",
     },
   },
   {
     id: "idu",
-    chapter: "CHAPTER 03 · IDU",
-    anchorLabel: "03 · IDU · RISING",
+    chapter: "CHAPTER 04 · IDU",
+    anchorLabel: "04 · IDU · RISING",
     sunLabel: "ON THE HORIZON",
     name: "Idu Estate",
     tagline: "Family homes rising with the morning.",
@@ -61,11 +87,37 @@ export const PROJECT_CHAPTERS: ProjectChapter[] = [
       "A family-first community taking shape in Idu: duplexes with gardens, tree-lined streets, playgrounds and a community heart. Early registrants choose plots and finishes first.",
     tags: ["Detached duplexes", "Private gardens", "Playgrounds", "Carports"],
     badge: "ON THE HORIZON · RISING",
+    flagship: false,
     glance: {
-      heading: "03 · IDU",
+      heading: "04 · IDU",
       blurb: "Family duplexes · rising · early-bird plot priority",
       ctaLabel: "REGISTER INTEREST →",
     },
+  },
+];
+
+export interface JahiPricingOption {
+  id: string;
+  label: string;
+  price: string;
+  note: string;
+  planLines: string[];
+}
+
+export const JAHI_PRICING: JahiPricingOption[] = [
+  {
+    id: "carcass",
+    label: "SHELL CARCASS",
+    price: "₦230M",
+    note: "Without exterior finish",
+    planLines: ["30% down payment", "Balance within 8 months"],
+  },
+  {
+    id: "finished",
+    label: "FULLY FINISHED",
+    price: "₦280M",
+    note: "Move-in ready, keys in hand",
+    planLines: ["12-month payment plan"],
   },
 ];
 

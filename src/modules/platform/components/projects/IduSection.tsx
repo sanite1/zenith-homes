@@ -1,8 +1,8 @@
 import { Link } from "react-router-dom";
 import { PROJECT_CHAPTERS } from "@/data/projects-data";
-import photoIdu from "@/assets/photo-idu.png";
+import photoIdu from "@/assets/photo-idu.jpg";
 
-const idu = PROJECT_CHAPTERS[2];
+const idu = PROJECT_CHAPTERS.find((c) => c.id === "idu")!;
 
 const IduSection = () => (
   <section
@@ -58,7 +58,7 @@ const IduSection = () => (
         </Link>
       </div>
       <div className="relative max-lg:order-1">
-        <img
+        <img loading="lazy"
           src={photoIdu}
           alt="Idu Estate duplexes"
           className="block h-[320px] w-full rounded-[22px] object-cover sm:h-[520px]"

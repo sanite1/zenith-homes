@@ -1,10 +1,10 @@
 import { Link } from "react-router-dom";
 import { PROJECT_CHAPTERS } from "@/data/projects-data";
-import photoExterior from "@/assets/photo-exterior.png";
-import photoKitchen from "@/assets/photo-kitchen.png";
-import photoLiving from "@/assets/photo-living.png";
+import photoExterior from "@/assets/photo-exterior.jpg";
+import photoKitchen from "@/assets/photo-kitchen.jpg";
+import photoLiving from "@/assets/photo-living.jpg";
 
-const guzape = PROJECT_CHAPTERS[0];
+const guzape = PROJECT_CHAPTERS.find((c) => c.id === "guzape")!;
 
 const GuzapeSection = () => (
   <section
@@ -13,7 +13,7 @@ const GuzapeSection = () => (
   >
     <div className="grid grid-cols-1 items-start gap-14 lg:grid-cols-[1.15fr_1fr]">
       <div className="relative">
-        <img
+        <img loading="lazy"
           src={photoExterior}
           alt="Zenith Terraces, Guzape"
           className="block h-[320px] w-full rounded-[22px] object-cover object-[50%_30%] sm:h-[520px]"
@@ -22,12 +22,12 @@ const GuzapeSection = () => (
           {guzape.badge}
         </div>
         <div className="absolute right-[18px] -bottom-[26px] flex gap-3">
-          <img
+          <img loading="lazy"
             src={photoKitchen}
             alt="Interior"
             className="h-[86px] w-[120px] rounded-xl border-4 border-white object-cover shadow-[0_12px_30px_rgba(8,24,12,.25)] max-sm:h-[64px] max-sm:w-[90px]"
           />
-          <img
+          <img loading="lazy"
             src={photoLiving}
             alt="Living room"
             className="h-[86px] w-[120px] rounded-xl border-4 border-white object-cover shadow-[0_12px_30px_rgba(8,24,12,.25)] max-sm:h-[64px] max-sm:w-[90px]"

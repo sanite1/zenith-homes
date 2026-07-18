@@ -1,9 +1,9 @@
 import { Link } from "react-router-dom";
 import { PROJECT_CHAPTERS } from "@/data/projects-data";
-import photoLiving from "@/assets/photo-living.png";
-import photoKitchen from "@/assets/photo-kitchen.png";
+import photoLiving from "@/assets/photo-living.jpg";
+import photoKitchen from "@/assets/photo-kitchen.jpg";
 
-const kado = PROJECT_CHAPTERS[1];
+const kado = PROJECT_CHAPTERS.find((c) => c.id === "kado")!;
 
 const KadoSection = () => (
   <section
@@ -64,12 +64,12 @@ const KadoSection = () => (
           </div>
         </div>
         <div className="relative min-h-[400px] lg:min-h-[620px]">
-          <img
+          <img loading="lazy"
             src={photoLiving}
             alt="Kado Homes living room"
             className="absolute inset-x-0 top-0 h-[58%] w-full object-cover"
           />
-          <img
+          <img loading="lazy"
             src={photoKitchen}
             alt="Kado Homes kitchen"
             className="absolute inset-x-0 bottom-0 h-[42%] w-full object-cover"

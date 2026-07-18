@@ -11,7 +11,7 @@ const ProjectsHeader = () => (
         THE PORTFOLIO
       </div>
       <h1 className="max-w-[820px] text-[clamp(38px,5vw,64px)] leading-[1.08] font-light">
-        Three points on{" "}
+        Four points on{" "}
         <span className="font-bold">
           the sun's climb<span className="text-gold-300">.</span>
         </span>
@@ -23,7 +23,7 @@ const ProjectsHeader = () => (
             href={`#${chapter.id}`}
             className={cn(
               "pb-[5px]",
-              chapter.id === "kado"
+              chapter.id === "jahi"
                 ? "border-b-[1.5px] border-gold-300 text-gold-300"
                 : "border-b-[1.5px] border-gold-300/60 text-sage-200 hover:text-gold-300",
             )}
