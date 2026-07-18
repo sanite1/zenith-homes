@@ -1,0 +1,80 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Space Grotesk", ui-sans-serif, system-ui, sans-serif;
+  --font-script: "Great Vibes", cursive;
+
+  /* Forest greens: the Zenith ground */
+  --color-forest-950: #081810;
+  --color-forest-900: #0a2010;
+  --color-forest-800: #0c2a12;
+  --color-forest-700: #123317;
+  --color-forest-600: #1d5227;
+
+  /* Sun golds: from high noon to bronze */
+  --color-gold-300: #ffd75e;
+  --color-gold-400: #e9a91d;
+  --color-gold-500: #c8901a;
+  --color-gold-600: #b0781a;
+
+  /* Golden-hour creams */
+  --color-cream-50: #fdf9ef;
+  --color-cream-100: #fbf3e3;
+  --color-cream-200: #f6e3ba;
+  --color-cream-300: #fdf4dd;
+
+  /* Ink and muted greens */
+  --color-ink-900: #161d17;
+  --color-ink-600: #3f443e;
+  --color-ink-500: #5a6157;
+  --color-ink-400: #7a7f78;
+  --color-ink-300: #8a8f89;
+  --color-sage-200: #cfe3d2;
+  --color-sage-300: #b7c9b6;
+  --color-sage-500: #8fa892;
+
+  /* Signals */
+  --color-flame-500: #e8401f;
+}
+
+:root {
+  --radius: 0.625rem;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-sans);
+  background: #fff;
+  color: var(--color-ink-900);
+  overflow-x: clip;
+  -webkit-font-smoothing: antialiased;
+}
+
+input,
+textarea,
+select,
+button {
+  font-family: var(--font-sans);
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: var(--color-ink-300);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
