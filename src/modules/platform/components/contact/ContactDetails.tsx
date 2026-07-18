@@ -1,4 +1,5 @@
-import { SITE_CONTACT, SOCIAL_BADGES } from "@/data/site-data";
+import { SITE_CONTACT } from "@/data/site-data";
+import SocialLinks from "@/components/shared/SocialLinks";
 
 const detailBlocks = [
   { label: "CALL / WHATSAPP", lines: SITE_CONTACT.phones },
@@ -25,21 +26,8 @@ const ContactDetails = () => (
         </div>
       ))}
     </div>
-    <div className="mt-[30px] flex gap-3">
-      {SOCIAL_BADGES.map((badge) => (
-        <span
-          key={badge.id}
-          className="flex h-[38px] w-[38px] items-center justify-center rounded-full border border-sage-200/35 text-[12.5px] font-bold text-gold-300"
-        >
-          {badge.label}
-        </span>
-      ))}
-    </div>
-    <div className="mt-3 text-xs leading-8 text-sage-500">
-      {SITE_CONTACT.socialHandles[0]}
-      <br />
-      {SITE_CONTACT.socialHandles[1]} · {SITE_CONTACT.rc}
-    </div>
+    <SocialLinks className="mt-[30px]" />
+    <div className="mt-4 text-xs text-sage-500">{SITE_CONTACT.rc}</div>
   </div>
 );
 

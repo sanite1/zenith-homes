@@ -16,9 +16,7 @@ export interface SiteContact {
   phones: string[];
   emails: string[];
   address: string[];
-  website: string;
   hours: string[];
-  socialHandles: string[];
   rc: string;
 }
 
@@ -26,21 +24,23 @@ export const SITE_CONTACT: SiteContact = {
   phones: ["0814 662 8362", "0816 324 3281"],
   emails: ["Info@zenithhomesltd.com", "Sales@zenithhomesltd.com"],
   address: ["No 2 Ubiaja Crescent,", "Garki, Abuja, Nigeria"],
-  website: "www.zenithhomesltd.com",
   hours: ["Mon to Sat · 9am to 5pm", "Site visits by appointment"],
-  socialHandles: ["@Zenith_homes.and.apartments", "@Zenith_Homes025"],
   rc: "RC 8642300",
 };
 
-export interface SocialBadge {
-  id: string;
+export interface SocialLink {
+  id: "instagram" | "x";
   label: string;
+  href: string;
 }
 
-export const SOCIAL_BADGES: SocialBadge[] = [
-  { id: "instagram", label: "IG" },
-  { id: "x", label: "X" },
-  { id: "facebook", label: "FB" },
+export const SOCIAL_LINKS: SocialLink[] = [
+  {
+    id: "instagram",
+    label: "Instagram",
+    href: "https://www.instagram.com/zenith_homes.and.apartments",
+  },
+  { id: "x", label: "X", href: "https://x.com/Zenith_Homes025" },
 ];
 
 export interface FooterLink {
