@@ -1,8 +1,8 @@
 import { Link } from "react-router-dom";
-import photoIdu from "@/assets/photo-idu.png";
+import photoIdu from "@/assets/photo-idu.jpg";
 
 const pillCells = [
-  { label: "DISTRICT", value: "Guzape · Idu · Kado" },
+  { label: "DISTRICT", value: "Jahi · Guzape · Kado · Idu" },
   { label: "HOME TYPE", value: "Terrace, Apartment..." },
   { label: "STATUS", value: "Now selling" },
 ];
@@ -11,6 +11,7 @@ const HeroSection = () => (
   <section className="relative overflow-hidden bg-forest-800 pb-40 lg:h-[780px] lg:pb-0">
     <img
       src={photoIdu}
+      fetchPriority="high"
       alt="Zenith family homes, Idu Abuja"
       className="absolute inset-0 h-full w-full object-cover object-[50%_42%]"
     />
@@ -19,7 +20,7 @@ const HeroSection = () => (
     <div className="relative z-[3] mx-auto h-full max-w-[1168px] px-5 sm:px-6 lg:px-0">
       <div className="inline-flex items-center gap-[9px] rounded-full border border-white/25 bg-forest-950/55 px-[18px] py-[9px] text-xs font-semibold tracking-[0.14em] text-white backdrop-blur-[6px] max-lg:mt-28 lg:absolute lg:top-[118px] lg:right-0">
         <span className="h-2 w-2 rounded-full bg-flame-500 shadow-[0_0_8px_rgba(232,64,31,.9)]" />
-        NOW SELLING · KADO, ABUJA
+        NOW SELLING · JAHI & KADO, ABUJA
       </div>
 
       <div className="mt-8 max-w-[760px] text-white lg:absolute lg:top-[196px] lg:left-0 lg:mt-0">
@@ -33,8 +34,8 @@ const HeroSection = () => (
           </span>
         </h1>
         <p className="mt-6 max-w-[500px] text-[15px] leading-[1.7] text-white/95 [text-shadow:0_1px_18px_rgba(8,24,12,.55)] sm:text-[17px]">
-          We build it: luxury apartments and family homes across Guzape, Idu
-          and Kado, finished to the last detail and kept for generations.
+          We build it: luxury apartments and family homes across Jahi, Guzape,
+          Idu and Kado, finished to the last detail and kept for generations.
         </p>
       </div>
 

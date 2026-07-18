@@ -4,8 +4,9 @@ export interface SunPathCard {
   blurb: string;
   badge: string;
   badgeTone: "delivered" | "selling" | "rising";
-  image: "exterior" | "living" | "idu";
+  image: "jahi" | "exterior" | "living" | "idu";
   flagship: boolean;
+  cta: { label: string; to: string };
 }
 
 export const SUN_PATH_CARDS: SunPathCard[] = [
@@ -17,6 +18,17 @@ export const SUN_PATH_CARDS: SunPathCard[] = [
     badgeTone: "delivered",
     image: "exterior",
     flagship: false,
+    cta: { label: "SEE THE STORY →", to: "/projects" },
+  },
+  {
+    id: "jahi",
+    name: "The Dream Home",
+    blurb: "Jahi · 4 units of 4-bed terraces, shell or fully finished",
+    badge: "DAYBREAK · NOW SELLING",
+    badgeTone: "selling",
+    image: "jahi",
+    flagship: true,
+    cta: { label: "BOOK A VIEWING →", to: "/contact" },
   },
   {
     id: "kado",
@@ -25,7 +37,8 @@ export const SUN_PATH_CARDS: SunPathCard[] = [
     badge: "HIGH NOON · NOW SELLING",
     badgeTone: "selling",
     image: "living",
-    flagship: true,
+    flagship: false,
+    cta: { label: "BOOK A VIEWING →", to: "/contact" },
   },
   {
     id: "idu",
@@ -35,6 +48,7 @@ export const SUN_PATH_CARDS: SunPathCard[] = [
     badgeTone: "rising",
     image: "idu",
     flagship: false,
+    cta: { label: "REGISTER INTEREST →", to: "/contact" },
   },
 ];
 

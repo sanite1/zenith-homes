@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { INSIDE_CALLOUTS, INSIDE_FEATURES } from "@/data/home-data";
-import photoKitchen from "@/assets/photo-kitchen.png";
+import photoKitchen from "@/assets/photo-kitchen.jpg";
 
 const calloutPositions = [
   "left-4 top-4 sm:left-[26px] sm:top-[26px]",
@@ -11,7 +11,7 @@ const calloutPositions = [
 const InsideSection = () => (
   <section className="grid grid-cols-1 bg-forest-800 lg:grid-cols-[1.15fr_1fr]">
     <div className="relative min-h-[380px] overflow-hidden sm:min-h-[560px]">
-      <img
+      <img loading="lazy"
         src={photoKitchen}
         alt="Designer kitchen"
         className="absolute inset-0 h-full w-full object-cover"

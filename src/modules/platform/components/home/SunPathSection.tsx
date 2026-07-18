@@ -1,11 +1,13 @@
 import { Link } from "react-router-dom";
 import { cn } from "@/lib/utils";
 import { SUN_PATH_CARDS, HOME_STATS, type SunPathCard } from "@/data/home-data";
-import photoExterior from "@/assets/photo-exterior.png";
-import photoLiving from "@/assets/photo-living.png";
-import photoIdu from "@/assets/photo-idu.png";
+import photoExterior from "@/assets/photo-exterior.jpg";
+import photoLiving from "@/assets/photo-living.jpg";
+import photoIdu from "@/assets/photo-idu.jpg";
+import photoJahi from "@/assets/photo-jahi-front.jpg";
 
 const IMAGE_MAP: Record<SunPathCard["image"], string> = {
+  jahi: photoJahi,
   exterior: photoExterior,
   living: photoLiving,
   idu: photoIdu,
@@ -35,7 +37,7 @@ const DistrictCard = ({ card }: { card: SunPathCard }) => (
     )}
   >
     <div className="relative">
-      <img
+      <img loading="lazy"
         src={IMAGE_MAP[card.image]}
         alt={card.name}
         className="block h-[180px] w-full object-cover"
@@ -69,10 +71,10 @@ const DistrictCard = ({ card }: { card: SunPathCard }) => (
         </div>
       ) : (
         <Link
-          to={card.id === "guzape" ? "/projects" : "/contact"}
+          to={card.cta.to}
           className="mt-3 inline-block border-b-[1.5px] border-gold-400 pb-[3px] text-[13.5px] font-semibold text-forest-700"
         >
-          {card.id === "guzape" ? "SEE THE STORY →" : "REGISTER INTEREST →"}
+          {card.cta.label}
         </Link>
       )}
     </div>
@@ -88,14 +90,15 @@ const SunPathSection = () => (
             THE PORTFOLIO · FOLLOW THE SUN
           </div>
           <h2 className="text-[clamp(32px,4vw,48px)] leading-[1.12] font-bold text-ink-900">
-            Three districts.
+            Four districts.
             <br />
             One climb to <span className="text-gold-500 italic">the peak.</span>
           </h2>
         </div>
         <p className="max-w-[360px] pb-1.5 text-[14.5px] leading-[1.8] text-ink-500">
           Every Zenith project is a point on the sun's climb, from first light
-          in Guzape to high noon in Kado. Choose where you board.
+          in Guzape to daybreak in Jahi and high noon in Kado. Choose where
+          you board.
         </p>
       </div>
 
@@ -103,18 +106,20 @@ const SunPathSection = () => (
       <div className="relative">
         <div className="relative hidden h-[300px] lg:block">
           <div className="absolute inset-x-0 top-[60px] h-[340px] rounded-t-[100%_200%] border-2 border-dashed border-gold-500/50 border-b-transparent" />
-          <div className="absolute top-[150px] left-[14%] z-[2] h-4 w-4 rounded-full bg-gold-500" />
-          <div className="absolute top-[34px] left-1/2 z-[2] h-[52px] w-[52px] -translate-x-1/2 rounded-full bg-[radial-gradient(circle_at_38%_32%,#ffd75e,#e9a91d)] shadow-[0_0_44px_rgba(233,169,29,.85)]" />
-          <div className="absolute top-[18px] left-[calc(50%+38px)] text-[10.5px] font-bold tracking-[0.26em] text-gold-500">
+          <div className="absolute top-[168px] left-[12.5%] z-[2] h-4 w-4 -translate-x-1/2 rounded-full bg-gold-500" />
+          <div className="absolute top-[64px] left-[37.5%] z-[2] h-[52px] w-[52px] -translate-x-1/2 rounded-full bg-[radial-gradient(circle_at_38%_32%,#ffd75e,#e9a91d)] shadow-[0_0_44px_rgba(233,169,29,.85)]" />
+          <div className="absolute top-[48px] left-[calc(37.5%+38px)] text-[10.5px] font-bold tracking-[0.26em] text-gold-500">
             THE ZENITH
           </div>
-          <div className="absolute top-[150px] right-[14%] z-[2] h-4 w-4 rounded-full border-2 border-gold-500 bg-white" />
-          <div className="absolute top-[166px] left-[14.6%] h-[134px] border-l-[1.5px] border-dashed border-gold-500/55" />
-          <div className="absolute top-[86px] left-1/2 h-[214px] border-l-[1.5px] border-dashed border-gold-500/55" />
-          <div className="absolute top-[166px] right-[14.6%] h-[134px] border-l-[1.5px] border-dashed border-gold-500/55" />
+          <div className="absolute top-[92px] left-[62.5%] z-[2] h-4 w-4 -translate-x-1/2 rounded-full bg-gold-500" />
+          <div className="absolute top-[168px] left-[87.5%] z-[2] h-4 w-4 -translate-x-1/2 rounded-full border-2 border-gold-500 bg-white" />
+          <div className="absolute top-[184px] left-[12.5%] h-[116px] border-l-[1.5px] border-dashed border-gold-500/55" />
+          <div className="absolute top-[116px] left-[37.5%] h-[184px] border-l-[1.5px] border-dashed border-gold-500/55" />
+          <div className="absolute top-[108px] left-[62.5%] h-[192px] border-l-[1.5px] border-dashed border-gold-500/55" />
+          <div className="absolute top-[184px] left-[87.5%] h-[116px] border-l-[1.5px] border-dashed border-gold-500/55" />
         </div>
 
-        <div className="relative grid grid-cols-1 gap-8 md:grid-cols-3 md:gap-5 lg:gap-8 max-lg:mt-2 max-md:border-l-2 max-md:border-dashed max-md:border-gold-500/50 max-md:pl-6">
+        <div className="relative grid grid-cols-1 gap-8 md:grid-cols-2 md:gap-5 lg:grid-cols-4 lg:gap-6 max-lg:mt-2 max-md:border-l-2 max-md:border-dashed max-md:border-gold-500/50 max-md:pl-6">
           {SUN_PATH_CARDS.map((card) => (
             <div key={card.id} className="relative max-md:pt-1">
               <span
