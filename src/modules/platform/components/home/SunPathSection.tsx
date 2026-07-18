@@ -2,16 +2,45 @@ import { Link } from "react-router-dom";
 import { cn } from "@/lib/utils";
 import { SUN_PATH_CARDS, HOME_STATS, type SunPathCard } from "@/data/home-data";
 import photoExterior from "@/assets/photo-exterior.jpg";
-import photoLiving from "@/assets/photo-living.jpg";
-import photoIdu from "@/assets/photo-idu.jpg";
+import photoKado from "@/assets/photo-kado-front.jpg";
+import photoIdu from "@/assets/photo-idu-estate.jpg";
 import photoJahi from "@/assets/photo-jahi-front.jpg";
 
 const IMAGE_MAP: Record<SunPathCard["image"], string> = {
   jahi: photoJahi,
   exterior: photoExterior,
-  living: photoLiving,
+  kado: photoKado,
   idu: photoIdu,
 };
+
+// The cards climb the arc: each is staggered at its sun-height.
+// Guzape sits in the risen morning, Jahi at daybreak, Kado at the zenith
+// (the peak of the climb), Idu waiting on the horizon.
+const STAGGER: Record<string, string> = {
+  guzape: "lg:translate-y-[130px]",
+  jahi: "lg:translate-y-[60px]",
+  kado: "lg:translate-y-0",
+  idu: "lg:translate-y-[150px]",
+};
+
+// Each project's sun, notched into the top of its card.
+const SunMedallion = ({ id }: { id: string }) => (
+  <div className="absolute -top-7 left-1/2 z-[3] hidden h-14 w-14 -translate-x-1/2 items-center justify-center rounded-full bg-white shadow-[0_10px_26px_rgba(58,47,20,.18)] ring-1 ring-gold-500/30 lg:flex">
+    {id === "guzape" && <span className="h-4 w-4 rounded-full bg-gold-500" />}
+    {id === "jahi" && (
+      <span className="relative flex h-full w-full items-end justify-center overflow-hidden rounded-full pb-[17px]">
+        <span className="absolute inset-x-2 bottom-[17px] border-b border-gold-500/40" />
+        <span className="h-3 w-6 rounded-t-full bg-gradient-to-b from-gold-300 to-gold-400 shadow-[0_0_16px_rgba(255,215,94,.9)]" />
+      </span>
+    )}
+    {id === "kado" && (
+      <span className="h-7 w-7 rounded-full bg-[radial-gradient(circle_at_38%_32%,#ffd75e,#e9a91d)] shadow-[0_0_24px_rgba(233,169,29,.9)]" />
+    )}
+    {id === "idu" && (
+      <span className="h-4 w-4 rounded-full border-2 border-gold-500 bg-white" />
+    )}
+  </div>
+);
 
 const Badge = ({ card }: { card: SunPathCard }) => (
   <div
@@ -30,25 +59,31 @@ const Badge = ({ card }: { card: SunPathCard }) => (
 const DistrictCard = ({ card }: { card: SunPathCard }) => (
   <article
     className={cn(
-      "overflow-hidden rounded-[18px]",
+      "relative flex h-full flex-col overflow-hidden rounded-[18px]",
       card.flagship
-        ? "bg-forest-700 shadow-[0_26px_60px_rgba(18,51,23,.35)]"
+        ? "bg-forest-700 shadow-[0_26px_60px_rgba(18,51,23,.35)] ring-1 ring-gold-400/40"
         : "border border-forest-700/12 bg-white",
     )}
   >
     <div className="relative">
-      <img loading="lazy"
+      <img
+        loading="lazy"
         src={IMAGE_MAP[card.image]}
         alt={card.name}
         className="block h-[180px] w-full object-cover"
       />
       <Badge card={card} />
     </div>
-    <div className={cn("p-5 pb-5", card.flagship && "text-white")}>
+    <div
+      className={cn(
+        "flex flex-1 flex-col p-5 pb-5",
+        card.flagship && "text-white",
+      )}
+    >
       <h3 className="text-xl font-bold">{card.name}</h3>
       <p
         className={cn(
-          "mt-1 text-[13px]",
+          "mt-1 flex-1 text-[13px]",
           card.flagship ? "text-sage-300" : "text-ink-400",
         )}
       >
@@ -58,13 +93,13 @@ const DistrictCard = ({ card }: { card: SunPathCard }) => (
         <div className="mt-3.5 flex flex-wrap gap-2.5">
           <Link
             to="/contact"
-            className="rounded-full bg-gradient-to-br from-gold-300 to-gold-400 px-[18px] py-2.5 text-[12.5px] font-bold text-forest-700"
+            className="rounded-full bg-gradient-to-br from-gold-300 to-gold-400 px-4 py-2.5 text-[12px] font-bold text-forest-700"
           >
             Book a viewing
           </Link>
           <Link
             to="/projects"
-            className="rounded-full border border-white/40 px-[18px] py-2.5 text-[12.5px] font-semibold text-white"
+            className="rounded-full border border-white/40 px-4 py-2.5 text-[12px] font-semibold text-white"
           >
             Payment plans
           </Link>
@@ -72,7 +107,7 @@ const DistrictCard = ({ card }: { card: SunPathCard }) => (
       ) : (
         <Link
           to={card.cta.to}
-          className="mt-3 inline-block border-b-[1.5px] border-gold-400 pb-[3px] text-[13.5px] font-semibold text-forest-700"
+          className="mt-3 inline-block w-fit border-b-[1.5px] border-gold-400 pb-[3px] text-[13.5px] font-semibold text-forest-700"
         >
           {card.cta.label}
         </Link>
@@ -84,7 +119,7 @@ const DistrictCard = ({ card }: { card: SunPathCard }) => (
 const SunPathSection = () => (
   <section className="relative -mt-1 overflow-hidden bg-white px-5 py-16 sm:px-10 lg:px-14 lg:pt-[78px] lg:pb-[70px]">
     <div className="mx-auto max-w-[1168px]">
-      <div className="mb-10 flex flex-col gap-6 lg:mb-3.5 lg:flex-row lg:items-end lg:justify-between">
+      <div className="mb-10 flex flex-col gap-6 lg:mb-6 lg:flex-row lg:items-end lg:justify-between">
         <div>
           <div className="mb-3.5 text-xs font-bold tracking-[0.26em] text-gold-600">
             THE PORTFOLIO · FOLLOW THE SUN
@@ -102,26 +137,40 @@ const SunPathSection = () => (
         </p>
       </div>
 
-      {/* Desktop: the arc rises over the cards. Mobile: the arc becomes a vertical climb rail. */}
-      <div className="relative">
-        <div className="relative hidden h-[300px] lg:block">
-          <div className="absolute inset-x-0 top-[60px] h-[340px] rounded-t-[100%_200%] border-2 border-dashed border-gold-500/50 border-b-transparent" />
-          <div className="absolute top-[168px] left-[12.5%] z-[2] h-4 w-4 -translate-x-1/2 rounded-full bg-gold-500" />
-          <div className="absolute top-[64px] left-[37.5%] z-[2] h-[52px] w-[52px] -translate-x-1/2 rounded-full bg-[radial-gradient(circle_at_38%_32%,#ffd75e,#e9a91d)] shadow-[0_0_44px_rgba(233,169,29,.85)]" />
-          <div className="absolute top-[48px] left-[calc(37.5%+38px)] text-[10.5px] font-bold tracking-[0.26em] text-gold-500">
-            THE ZENITH
-          </div>
-          <div className="absolute top-[92px] left-[62.5%] z-[2] h-4 w-4 -translate-x-1/2 rounded-full bg-gold-500" />
-          <div className="absolute top-[168px] left-[87.5%] z-[2] h-4 w-4 -translate-x-1/2 rounded-full border-2 border-gold-500 bg-white" />
-          <div className="absolute top-[184px] left-[12.5%] h-[116px] border-l-[1.5px] border-dashed border-gold-500/55" />
-          <div className="absolute top-[116px] left-[37.5%] h-[184px] border-l-[1.5px] border-dashed border-gold-500/55" />
-          <div className="absolute top-[108px] left-[62.5%] h-[192px] border-l-[1.5px] border-dashed border-gold-500/55" />
-          <div className="absolute top-[184px] left-[87.5%] h-[116px] border-l-[1.5px] border-dashed border-gold-500/55" />
-        </div>
+      <div className="relative lg:pt-24">
+        {/* The dashed sun path, threading through each card's medallion */}
+        <svg
+          viewBox="0 0 1168 320"
+          preserveAspectRatio="none"
+          fill="none"
+          aria-hidden="true"
+          className="pointer-events-none absolute top-8 left-0 hidden h-[320px] w-full lg:block"
+        >
+          <path
+            d="M -30 290 Q 60 228 146 208 Q 290 172 438 138 Q 600 84 730 78 Q 880 86 1022 228 Q 1080 282 1198 334"
+            stroke="#c8901a"
+            strokeOpacity=".45"
+            strokeWidth="2"
+            strokeDasharray="2 9"
+            strokeLinecap="round"
+          />
+        </svg>
 
-        <div className="relative grid grid-cols-1 gap-8 md:grid-cols-2 md:gap-5 lg:grid-cols-4 lg:gap-6 max-lg:mt-2 max-md:border-l-2 max-md:border-dashed max-md:border-gold-500/50 max-md:pl-6">
+        <div className="relative grid grid-cols-1 gap-8 md:grid-cols-2 md:gap-5 lg:mb-[170px] lg:grid-cols-4 lg:gap-6 max-md:border-l-2 max-md:border-dashed max-md:border-gold-500/50 max-md:pl-6">
           {SUN_PATH_CARDS.map((card) => (
-            <div key={card.id} className="relative max-md:pt-1">
+            <div
+              key={card.id}
+              className={cn(
+                "relative transition-transform max-md:pt-1",
+                STAGGER[card.id],
+              )}
+            >
+              {card.id === "kado" && (
+                <span className="absolute -top-[52px] left-1/2 hidden -translate-x-1/2 text-[10.5px] font-bold tracking-[0.26em] whitespace-nowrap text-gold-500 lg:block">
+                  THE ZENITH
+                </span>
+              )}
+              <SunMedallion id={card.id} />
               <span
                 className={cn(
                   "absolute top-8 -left-[31px] z-[2] hidden h-[14px] w-[14px] rounded-full max-md:block",
