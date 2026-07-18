@@ -18,8 +18,8 @@ const IMAGE_MAP: Record<SunPathCard["image"], string> = {
 // (the peak of the climb), Idu waiting on the horizon.
 const STAGGER: Record<string, string> = {
   guzape: "lg:translate-y-[130px]",
-  jahi: "lg:translate-y-[60px]",
-  kado: "lg:translate-y-0",
+  kado: "lg:translate-y-[60px]",
+  jahi: "lg:translate-y-0",
   idu: "lg:translate-y-[150px]",
 };
 
@@ -27,13 +27,13 @@ const STAGGER: Record<string, string> = {
 const SunMedallion = ({ id }: { id: string }) => (
   <div className="absolute -top-7 left-1/2 z-[3] hidden h-14 w-14 -translate-x-1/2 items-center justify-center rounded-full bg-white shadow-[0_10px_26px_rgba(58,47,20,.18)] ring-1 ring-gold-500/30 lg:flex">
     {id === "guzape" && <span className="h-4 w-4 rounded-full bg-gold-500" />}
-    {id === "jahi" && (
+    {id === "kado" && (
       <span className="relative flex h-full w-full items-end justify-center overflow-hidden rounded-full pb-[17px]">
         <span className="absolute inset-x-2 bottom-[17px] border-b border-gold-500/40" />
         <span className="h-3 w-6 rounded-t-full bg-gradient-to-b from-gold-300 to-gold-400 shadow-[0_0_16px_rgba(255,215,94,.9)]" />
       </span>
     )}
-    {id === "kado" && (
+    {id === "jahi" && (
       <span className="h-7 w-7 rounded-full bg-[radial-gradient(circle_at_38%_32%,#ffd75e,#e9a91d)] shadow-[0_0_24px_rgba(233,169,29,.9)]" />
     )}
     {id === "idu" && (
@@ -92,13 +92,13 @@ const DistrictCard = ({ card }: { card: SunPathCard }) => (
       {card.flagship ? (
         <div className="mt-3.5 flex flex-wrap gap-2.5">
           <Link
-            to="/contact"
+            to={`/contact?interest=${card.id}`}
             className="rounded-full bg-gradient-to-br from-gold-300 to-gold-400 px-4 py-2.5 text-[12px] font-bold text-forest-700"
           >
             Book a viewing
           </Link>
           <Link
-            to="/projects"
+            to={`/projects#${card.id}`}
             className="rounded-full border border-white/40 px-4 py-2.5 text-[12px] font-semibold text-white"
           >
             Payment plans
@@ -165,7 +165,7 @@ const SunPathSection = () => (
                 STAGGER[card.id],
               )}
             >
-              {card.id === "kado" && (
+              {card.id === "jahi" && (
                 <span className="absolute -top-[52px] left-1/2 hidden -translate-x-1/2 text-[10.5px] font-bold tracking-[0.26em] whitespace-nowrap text-gold-500 lg:block">
                   THE ZENITH
                 </span>
@@ -187,26 +187,25 @@ const SunPathSection = () => (
         </div>
       </div>
 
-      <div className="mt-12 grid grid-cols-1 gap-6 border-t border-forest-700/12 pt-[26px] sm:grid-cols-3 sm:gap-0 lg:mt-16">
+      <div className="mt-12 grid grid-cols-3 border-t border-forest-700/12 pt-6 lg:mt-16">
         {HOME_STATS.map((stat, i) => (
           <div
             key={stat.label}
             className={cn(
-              "sm:px-9",
-              i === 0 && "sm:pr-9 sm:pl-0",
-              i < HOME_STATS.length - 1 &&
-                "sm:border-r sm:border-forest-700/12",
+              "px-2 text-center sm:px-9 sm:text-left",
+              i === 0 && "sm:pl-0",
+              i < HOME_STATS.length - 1 && "border-r border-forest-700/12",
             )}
           >
             <div
               className={cn(
-                "text-[34px] font-bold sm:text-[40px]",
+                "text-[26px] font-bold sm:text-[40px]",
                 stat.gold ? "text-gold-500" : "text-forest-700",
               )}
             >
               {stat.value}
             </div>
-            <div className="mt-0.5 text-[13.5px] text-ink-500">
+            <div className="mt-0.5 text-[11px] leading-snug text-ink-500 sm:text-[13.5px]">
               {stat.label}
             </div>
           </div>

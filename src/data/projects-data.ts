@@ -121,6 +121,68 @@ export const JAHI_PRICING: JahiPricingOption[] = [
   },
 ];
 
+export interface PortfolioType {
+  id: string;
+  icon: "apartments" | "signature" | "family";
+  title: string;
+  intro: string;
+  features: string[];
+  liveIt: { label: string; anchor: string };
+  highlight: boolean;
+}
+
+// From the company profile: "Our Portfolio: Where Imagination Comes Home".
+export const PORTFOLIO_TYPES: PortfolioType[] = [
+  {
+    id: "luxury-apartments",
+    icon: "apartments",
+    title: "Luxury Apartments",
+    intro:
+      "Every sunrise glimmers through panoramic windows, every sunset bathes your sanctuary in golden hues.",
+    features: [
+      "Spacious open-plan living, abundant natural light",
+      "Designer kitchens, state-of-the-art appliances",
+      "Elegant bathrooms, premium fixtures",
+      "Private balconies, city or garden views",
+      "24-hour security and concierge services",
+    ],
+    liveIt: { label: "LIVE IT IN KADO →", anchor: "#kado" },
+    highlight: false,
+  },
+  {
+    id: "signature-homes",
+    icon: "signature",
+    title: "Signature Homes",
+    intro:
+      "Custom-crafted works of art. No detail too small, no dream too grand.",
+    features: [
+      "Bespoke layouts tailored to your lifestyle",
+      "Luxurious master suites, spacious guest rooms",
+      "Tranquil outdoor sanctuaries: gardens, pools, terraces",
+      "Smart home technology for seamless living",
+      "Energy-efficient systems, sustainable materials",
+    ],
+    liveIt: { label: "LIVE IT IN JAHI →", anchor: "#jahi" },
+    highlight: true,
+  },
+  {
+    id: "family-living",
+    icon: "family",
+    title: "Family-Friendly Living",
+    intro:
+      "Communities designed for laughter, learning and lifelong memories.",
+    features: [
+      "Colorful playgrounds for growing families",
+      "Tree-lined boulevards and lush green spaces",
+      "Vibrant community centers and gatherings",
+      "Recreational facilities and thoughtful amenities",
+      "Neighbourhoods alive with color and connection",
+    ],
+    liveIt: { label: "LIVE IT IN IDU →", anchor: "#idu" },
+    highlight: false,
+  },
+];
+
 export interface BuildStep {
   number: string;
   title: string;

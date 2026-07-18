@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { PROJECT_CHAPTERS } from "@/data/projects-data";
-import photoLiving from "@/assets/photo-living.jpg";
-import photoKitchen from "@/assets/photo-kitchen.jpg";
+import photoKadoFront from "@/assets/photo-kado-front.jpg";
+import photoKadoAngle from "@/assets/photo-kado-angle.jpg";
 
 const kado = PROJECT_CHAPTERS.find((c) => c.id === "kado")!;
 
@@ -50,13 +50,13 @@ const KadoSection = () => (
           </div>
           <div className="flex flex-col gap-3.5 sm:flex-row sm:items-center">
             <Link
-              to="/contact"
+              to="/contact?interest=kado"
               className="rounded-full bg-gradient-to-br from-gold-300 to-gold-400 px-[30px] py-[15px] text-center text-[14.5px] font-bold text-forest-700"
             >
               Book a viewing →
             </Link>
             <Link
-              to="/contact"
+              to="/contact?interest=kado"
               className="rounded-full border-[1.5px] border-white/45 px-[30px] py-[15px] text-center text-[14.5px] font-semibold text-white"
             >
               Request price list
@@ -65,17 +65,17 @@ const KadoSection = () => (
         </div>
         <div className="relative min-h-[400px] lg:min-h-[620px]">
           <img loading="lazy"
-            src={photoLiving}
-            alt="Kado Homes living room"
+            src={photoKadoFront}
+            alt="Kado Homes street elevation"
             className="absolute inset-x-0 top-0 h-[58%] w-full object-cover"
           />
           <img loading="lazy"
-            src={photoKitchen}
-            alt="Kado Homes kitchen"
+            src={photoKadoAngle}
+            alt="Kado Homes corner view"
             className="absolute inset-x-0 bottom-0 h-[42%] w-full object-cover"
           />
           <div className="absolute top-[22px] right-[22px] rounded-[14px] bg-white/[.94] px-[18px] py-3 text-[12.5px] font-bold text-forest-700 shadow-[0_12px_30px_rgba(8,24,12,.3)]">
-            ◔ As-built photography · no renders
+            ◔ Artist's impression · Kado Homes
           </div>
         </div>
       </div>

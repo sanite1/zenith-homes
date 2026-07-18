@@ -5,7 +5,7 @@ import GuzapeSection from "../components/projects/GuzapeSection";
 import KadoSection from "../components/projects/KadoSection";
 import IduSection from "../components/projects/IduSection";
 import HowWeBuildSection from "../components/projects/HowWeBuildSection";
-import AtAGlanceSection from "../components/projects/AtAGlanceSection";
+import PortfolioTypesSection from "../components/projects/PortfolioTypesSection";
 
 export default function Projects() {
   return (
@@ -20,7 +20,7 @@ export default function Projects() {
       <KadoSection />
       <IduSection />
       <HowWeBuildSection />
-      <AtAGlanceSection />
+      <PortfolioTypesSection />
     </main>
   );
 }

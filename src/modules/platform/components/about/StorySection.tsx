@@ -1,13 +1,13 @@
 import { ABOUT_STATS } from "@/data/about-data";
 import { SITE_CONTACT } from "@/data/site-data";
 import { cn } from "@/lib/utils";
-import photoIdu from "@/assets/photo-idu.png";
+import photoIdu from "@/assets/photo-idu-garden.jpg";
 
 const StorySection = () => (
   <section className="mx-auto max-w-[1168px] px-5 pt-16 pb-10 sm:px-6 lg:px-0 lg:pt-[76px]">
     <div className="grid grid-cols-1 items-start gap-16 lg:grid-cols-[1fr_1.1fr]">
       <div className="relative">
-        <img
+        <img loading="lazy"
           src={photoIdu}
           alt="Zenith duplex, Idu"
           className="block h-[300px] w-full rounded-[22px] object-cover sm:h-[440px]"
@@ -36,21 +36,22 @@ const StorySection = () => (
           innovation, luxury and trust, with a promise that every space we
           build is not brick and mortar, but a masterpiece carefully designed
           to inspire and nurture the lives within. From our first terraces in
-          Guzape to the estates rising in Idu and Kado, we build for families
-          who measure a home in decades, not transactions.
+          Guzape to The Dream Home rising in Jahi and the estates coming up in
+          Idu and Kado, we build for families who measure a home in decades,
+          not transactions.
         </p>
-        <div className="mt-8 flex flex-wrap gap-8 border-t border-forest-700/12 pt-[26px] sm:gap-10">
+        <div className="mt-8 grid grid-cols-3 border-t border-forest-700/12 pt-[26px] sm:flex sm:gap-10">
           {ABOUT_STATS.map((stat) => (
-            <div key={stat.label}>
+            <div key={stat.label} className="max-sm:px-1 max-sm:text-center">
               <div
                 className={cn(
-                  "text-[32px] font-bold",
+                  "text-[24px] font-bold sm:text-[32px]",
                   stat.gold ? "text-gold-500" : "text-forest-700",
                 )}
               >
                 {stat.value}
               </div>
-              <div className="mt-0.5 text-[12.5px] text-ink-400">
+              <div className="mt-0.5 text-[11px] leading-snug text-ink-400 sm:text-[12.5px]">
                 {stat.label}
               </div>
             </div>

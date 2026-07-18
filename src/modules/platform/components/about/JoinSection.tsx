@@ -32,7 +32,7 @@ const JoinSection = () => (
           boundless dreams. Your perfect space awaits.
         </p>
         <Link
-          to="/contact"
+          to="/contact?interest=other"
           className="inline-block rounded-full bg-gradient-to-br from-gold-300 to-gold-400 px-[34px] py-4 text-[15px] font-bold text-forest-700"
         >
           Start the conversation →

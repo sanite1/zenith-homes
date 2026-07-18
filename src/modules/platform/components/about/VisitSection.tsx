@@ -16,12 +16,12 @@ const VisitSection = () => (
         </div>
         <h2 className="text-[clamp(28px,3.5vw,38px)] leading-[1.15] font-bold text-ink-900">
           Words are easy.{" "}
-          <span className="text-gold-500">Walk our finished rooms.</span>
+          <span className="text-gold-500">Inspect the site yourself.</span>
         </h2>
         <p className="mt-[18px] max-w-[520px] text-[14.5px] leading-[1.85] text-[#6b6353]">
-          Every claim on this page survives a site visit. Tour the delivered
-          terraces in Guzape or the show apartment in Kado, and judge the
-          finishing with your own hands.
+          Every claim on this page survives an inspection. Book a site visit
+          to The Dream Home in Jahi or Kado Homes, both selling now, and judge
+          the build quality with your own eyes.
         </p>
         <div className="mt-[26px] flex flex-wrap gap-2.5">
           {visitChips.map((chip) => (
@@ -34,21 +34,51 @@ const VisitSection = () => (
           ))}
         </div>
       </div>
-      <div className="rounded-3xl border border-gold-500/25 bg-white p-8 text-center shadow-[0_18px_44px_rgba(58,47,20,.1)] sm:px-9 sm:py-[38px]">
-        <div className="mx-auto mb-[18px] h-[52px] w-[52px] rounded-full bg-[radial-gradient(circle_at_40%_35%,#ffd75e,#e9a91d)] shadow-[0_0_30px_rgba(233,169,29,.6)]" />
-        <div className="text-[22px] font-bold text-ink-900">
-          This weekend: Guzape & Kado
+      <div className="rounded-3xl border border-gold-500/25 bg-white p-7 shadow-[0_18px_44px_rgba(58,47,20,.1)] sm:px-9 sm:py-[34px]">
+        <div className="mb-1 text-[11px] font-bold tracking-[0.24em] text-gold-600">
+          PLAN YOUR VISIT
         </div>
-        <div className="mt-2 mb-6 text-[13.5px] text-ink-400">
-          Guided visits · 45 minutes · bring the family
+        <div className="text-[22px] font-bold text-ink-900">
+          Your tour, your pace.
+        </div>
+        <div className="mt-5 flex flex-col gap-4">
+          {[
+            {
+              step: "01",
+              title: "Choose a project",
+              detail: "Jahi or Kado, both now selling",
+            },
+            {
+              step: "02",
+              title: "Pick a day that suits you",
+              detail: "Mon to Sat · 9am to 5pm",
+            },
+            {
+              step: "03",
+              title: "Walk the rooms with our team",
+              detail: "Private and guided, at your pace",
+            },
+          ].map((item) => (
+            <div key={item.step} className="flex items-start gap-3.5">
+              <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-cream-100 text-[11px] font-bold text-gold-600">
+                {item.step}
+              </span>
+              <div>
+                <div className="text-[14.5px] font-semibold text-ink-900">
+                  {item.title}
+                </div>
+                <div className="text-[12.5px] text-ink-400">{item.detail}</div>
+              </div>
+            </div>
+          ))}
         </div>
         <Link
-          to="/contact"
-          className="inline-block rounded-full bg-forest-700 px-8 py-[15px] text-[14.5px] font-semibold text-white"
+          to="/contact?interest=other"
+          className="mt-6 block rounded-full bg-forest-700 px-8 py-[15px] text-center text-[14.5px] font-semibold text-white"
         >
-          Reserve a slot →
+          Book a private tour →
         </Link>
-        <div className="mt-3.5 text-[12.5px] text-ink-300">
+        <div className="mt-3.5 text-center text-[12.5px] text-ink-300">
           or call {SITE_CONTACT.phones[0]}
         </div>
       </div>

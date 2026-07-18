@@ -1,6 +1,6 @@
 import PageMeta from "@/components/shared/PageMeta";
 import ExperienceHeader from "../components/experience/ExperienceHeader";
-import DayTimeline from "../components/experience/DayTimeline";
+import JourneySection from "../components/experience/JourneySection";
 import PromiseSection from "../components/experience/PromiseSection";
 
 export default function Experience() {
@@ -8,10 +8,10 @@ export default function Experience() {
     <main>
       <PageMeta
         title="The Experience | Zenith Homes and Apartments"
-        description="A day lived at the peak: what owning a Zenith home feels like, from first light to nightfall, with after-sales care that never stops."
+        description="The Zenith Experience: personalized service before, a community of belonging during, and after-sales support long after the keys are in your hand."
       />
       <ExperienceHeader />
-      <DayTimeline />
+      <JourneySection />
       <PromiseSection />
     </main>
   );

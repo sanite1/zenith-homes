@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { PROJECT_CHAPTERS } from "@/data/projects-data";
-import photoIdu from "@/assets/photo-idu.jpg";
+import photoIdu from "@/assets/photo-idu-estate.jpg";
 
 const idu = PROJECT_CHAPTERS.find((c) => c.id === "idu")!;
 
@@ -51,7 +51,7 @@ const IduSection = () => (
           </p>
         </div>
         <Link
-          to="/contact"
+          to="/contact?interest=idu"
           className="inline-block rounded-full bg-forest-700 px-[30px] py-[15px] text-[14.5px] font-semibold text-white"
         >
           Register interest →

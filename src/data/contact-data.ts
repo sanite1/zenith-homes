@@ -9,6 +9,7 @@ export const CONTACT_INTERESTS: ContactInterest[] = [
   { id: "idu", label: "Idu Estate · register interest" },
   { id: "guzape", label: "Guzape Terraces · waitlist" },
   { id: "payment-plans", label: "Payment plans" },
+  { id: "other", label: "Other enquiry" },
 ];
 
 export interface DistrictCard {
@@ -31,14 +32,14 @@ export const DISTRICT_CARDS: DistrictCard[] = [
     id: "guzape",
     district: "GUZAPE",
     title: "Zenith Terraces",
-    blurb: "Delivered · visits by arrangement with residents' consent",
+    blurb: "Delivered 2025 · every key collected",
     tone: "delivered",
   },
   {
     id: "kado",
     district: "KADO",
-    title: "Kado Homes · show apartment open",
-    blurb: "Now selling · book a weekend viewing slot",
+    title: "Kado Homes",
+    blurb: "Now selling · private tours by appointment",
     tone: "selling",
   },
   {

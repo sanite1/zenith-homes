@@ -6,11 +6,20 @@ const ScrollToTop = () => {
 
   useEffect(() => {
     if (hash) {
-      const target = document.querySelector(hash);
-      if (target) {
-        target.scrollIntoView({ behavior: "smooth" });
-        return;
-      }
+      // Lazy-loaded pages may not have rendered the target yet: retry briefly.
+      let attempts = 0;
+      let timer: number | undefined;
+      const tryScroll = () => {
+        const target = document.querySelector(hash);
+        if (target) {
+          target.scrollIntoView({ behavior: "smooth" });
+        } else if (attempts < 20) {
+          attempts += 1;
+          timer = window.setTimeout(tryScroll, 100);
+        }
+      };
+      tryScroll();
+      return () => window.clearTimeout(timer);
     }
     window.scrollTo(0, 0);
   }, [pathname, hash]);

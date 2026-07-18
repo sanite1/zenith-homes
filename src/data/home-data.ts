@@ -4,7 +4,7 @@ export interface SunPathCard {
   blurb: string;
   badge: string;
   badgeTone: "delivered" | "selling" | "rising";
-  image: "jahi" | "exterior" | "living" | "idu";
+  image: "jahi" | "exterior" | "kado" | "idu";
   flagship: boolean;
   cta: { label: string; to: string };
 }
@@ -18,7 +18,17 @@ export const SUN_PATH_CARDS: SunPathCard[] = [
     badgeTone: "delivered",
     image: "exterior",
     flagship: false,
-    cta: { label: "SEE THE STORY →", to: "/projects" },
+    cta: { label: "SEE THE STORY →", to: "/projects#guzape" },
+  },
+  {
+    id: "kado",
+    name: "Kado Homes",
+    blurb: "Kado · 1–3 bed luxury apartments, smart-home standard",
+    badge: "HIGH NOON · NOW SELLING",
+    badgeTone: "selling",
+    image: "kado",
+    flagship: false,
+    cta: { label: "SEE THE STORY →", to: "/projects#kado" },
   },
   {
     id: "jahi",
@@ -27,18 +37,8 @@ export const SUN_PATH_CARDS: SunPathCard[] = [
     badge: "DAYBREAK · NOW SELLING",
     badgeTone: "selling",
     image: "jahi",
-    flagship: true,
-    cta: { label: "BOOK A VIEWING →", to: "/contact" },
-  },
-  {
-    id: "kado",
-    name: "Kado Homes",
-    blurb: "Kado · 1–3 bed luxury apartments, smart-home standard",
-    badge: "HIGH NOON · NOW SELLING",
-    badgeTone: "selling",
-    image: "living",
     flagship: false,
-    cta: { label: "BOOK A VIEWING →", to: "/contact" },
+    cta: { label: "PAYMENT PLANS →", to: "/projects#jahi" },
   },
   {
     id: "idu",
@@ -48,7 +48,7 @@ export const SUN_PATH_CARDS: SunPathCard[] = [
     badgeTone: "rising",
     image: "idu",
     flagship: false,
-    cta: { label: "REGISTER INTEREST →", to: "/contact" },
+    cta: { label: "SEE THE STORY →", to: "/projects#idu" },
   },
 ];
 
@@ -86,7 +86,7 @@ export const HOME_EXPERIENCE_CARDS: ExperienceCard[] = [
   {
     id: "morning",
     title: "Move-in day",
-    body: "Snag-free handover after an in-person walkthrough: keys to a home that's truly finished.",
+    body: "Our team walks with you from the first spark of inspiration to move-in day and beyond.",
   },
   {
     id: "noon",

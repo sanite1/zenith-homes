@@ -45,7 +45,7 @@ export interface AboutStat {
 }
 
 export const ABOUT_STATS: AboutStat[] = [
-  { value: "03", label: "Districts in Abuja", gold: false },
+  { value: "04", label: "Districts in Abuja", gold: false },
   { value: "2025", label: "First keys handed over", gold: true },
   { value: "24/7", label: "After-sales care", gold: false },
 ];

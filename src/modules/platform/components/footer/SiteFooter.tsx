@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { MapPin, Mail, Phone, Clock } from "lucide-react";
-import Logo from "@/components/shared/Logo";
 import SocialLinks from "@/components/shared/SocialLinks";
+import logoFull from "@/assets/logo-full.png";
 import { FOOTER_EXPLORE_LINKS, SITE_CONTACT } from "@/data/site-data";
 
 const contactLines = [
@@ -41,7 +41,14 @@ const SiteFooter = () => (
       {/* Brand · Explore · Contact */}
       <div className="grid grid-cols-1 gap-11 py-12 sm:grid-cols-2 lg:grid-cols-[1.4fr_0.8fr_1.2fr] lg:gap-14">
         <div>
-          <Logo variant="dark" className="mb-5" />
+          <Link to="/" className="mb-5 inline-block">
+            <img
+              src={logoFull}
+              alt="Zenith Homes and Apartments Ltd"
+              className="h-auto w-[190px] brightness-110"
+              loading="lazy"
+            />
+          </Link>
           <p className="max-w-[340px] text-[13.5px] leading-[1.9] text-sage-500">
             Luxurious, sustainable, people-centered housing in Abuja, where
             every resident finds belonging, beauty and peace of mind.
@@ -52,7 +59,7 @@ const SiteFooter = () => (
           <div className="mb-5 text-[11px] font-bold tracking-[0.26em] text-gold-300">
             EXPLORE
           </div>
-          <div className="flex flex-col gap-3 text-[14px]">
+          <div className="grid grid-cols-2 gap-x-4 gap-y-3 text-[14px] lg:flex lg:flex-col lg:gap-3">
             {FOOTER_EXPLORE_LINKS.map((link) => (
               <Link
                 key={link.href}
@@ -70,8 +77,8 @@ const SiteFooter = () => (
           </div>
           <div className="flex flex-col gap-3.5 text-[13.5px] text-sage-200">
             {contactLines.map(({ icon: Icon, text }) => (
-              <div key={text} className="flex items-start gap-3">
-                <span className="mt-0.5 flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-white/[.06] text-gold-300">
+              <div key={text} className="flex items-center gap-3">
+                <span className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-white/[.06] text-gold-300">
                   <Icon className="size-3.5" />
                 </span>
                 {text}

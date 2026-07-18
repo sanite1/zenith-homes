@@ -67,7 +67,7 @@ const GuzapeSection = () => (
         </div>
         <div className="flex flex-col gap-3.5 sm:flex-row">
           <Link
-            to="/contact"
+            to="/contact?interest=guzape"
             className="rounded-full bg-forest-700 px-7 py-3.5 text-center text-sm font-semibold text-white"
           >
             Join the waitlist

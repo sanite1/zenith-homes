@@ -22,10 +22,9 @@ const SunGlyph = ({ id }: { id: ExperienceCard["id"] }) => (
 );
 
 const GoldenHourSection = () => (
-  <section className="relative overflow-hidden bg-[linear-gradient(#fff,#faf0da_26%,#f6e3ba)] px-5 py-16 sm:px-10 lg:px-14 lg:pt-[92px] lg:pb-[84px]">
-    <div className="absolute -top-[104px] -right-[30%] -left-[30%] h-[186px] rounded-b-[50%] bg-forest-800 max-lg:hidden" />
+  <section className="relative overflow-hidden bg-[linear-gradient(#fdf9ef,#faf0da_26%,#f6e3ba)] px-5 py-16 sm:px-10 lg:px-14 lg:pt-[92px] lg:pb-[84px]">
     <div className="mx-auto max-w-[1168px]">
-      <div className="mx-auto max-w-[820px] text-center lg:mt-[34px]">
+      <div className="mx-auto max-w-[820px] text-center">
         <div className="mb-[18px] text-xs font-bold tracking-[0.3em] text-gold-600">
           THE ZENITH EXPERIENCE
         </div>

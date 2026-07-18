@@ -2,7 +2,10 @@ import { Link } from "react-router-dom";
 import { HOW_WE_BUILD_STEPS } from "@/data/projects-data";
 
 const HowWeBuildSection = () => (
-  <section className="relative overflow-hidden bg-forest-800 px-5 py-16 sm:px-6 lg:pt-24 lg:pb-[84px]">
+  <section
+    id="how-we-build"
+    className="relative scroll-mt-24 overflow-hidden bg-forest-800 px-5 py-16 sm:px-6 lg:pt-24 lg:pb-[84px]"
+  >
     <div className="absolute -top-[104px] -right-[30%] -left-[30%] h-[186px] rounded-b-[50%] bg-white max-lg:hidden" />
     <div className="relative mx-auto max-w-[1168px]">
       <div className="mb-4 text-center text-xs font-bold tracking-[0.3em] text-gold-300">
@@ -34,7 +37,7 @@ const HowWeBuildSection = () => (
       </div>
       <div className="mt-12 text-center lg:mt-[50px]">
         <Link
-          to="/contact"
+          to="/contact?interest=other"
           className="inline-block rounded-full bg-gradient-to-br from-gold-300 to-gold-400 px-[34px] py-4 text-[15px] font-bold text-forest-700"
         >
           Walk a site with us →

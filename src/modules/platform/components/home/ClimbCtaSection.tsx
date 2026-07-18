@@ -23,13 +23,13 @@ const ClimbCtaSection = () => (
         </p>
         <div className="flex flex-col gap-3.5 sm:flex-row">
           <Link
-            to="/contact"
+            to="/contact?interest=other"
             className="rounded-full bg-gradient-to-br from-gold-300 to-gold-400 px-8 py-4 text-center text-[15px] font-bold text-forest-700"
           >
             Book a site visit →
           </Link>
           <Link
-            to="/contact"
+            to="/contact?interest=other"
             className="rounded-full border-[1.5px] border-white/50 px-8 py-4 text-center text-[15px] font-semibold text-white"
           >
             Talk to our team
@@ -63,7 +63,7 @@ const ClimbCtaSection = () => (
           ★
         </span>
         <span className="text-[13px]">
-          <b>Viewings this weekend</b> · Guzape & Kado
+          <b>Private tours</b> · Mon to Sat, by appointment
         </span>
       </div>
     </div>

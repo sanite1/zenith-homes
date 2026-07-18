@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { useSearchParams } from "react-router-dom";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
@@ -34,11 +35,19 @@ type ContactFormValues = z.infer<typeof contactSchema>;
 
 const RATE_LIMIT_COOLDOWN_MS = 30_000;
 
+// text-base on mobile keeps iOS Safari from zooming on focus (needs >=16px).
 const inputClasses =
-  "w-full rounded-xl border border-forest-700/20 bg-[#fbfbf9] px-[18px] py-[15px] text-sm outline-none transition-colors focus:border-forest-700/50";
+  "w-full rounded-xl border border-forest-700/20 bg-[#fbfbf9] px-[18px] py-[15px] text-base outline-none transition-colors focus:border-forest-700/50 sm:text-sm";
 
 const ContactForm = () => {
-  const [interest, setInterest] = useState<string>(CONTACT_INTERESTS[0].label);
+  // CTAs elsewhere link to /contact?interest=<id> to preselect their chip.
+  const [searchParams] = useSearchParams();
+  const [interest, setInterest] = useState<string>(() => {
+    const fromUrl = CONTACT_INTERESTS.find(
+      (option) => option.id === searchParams.get("interest"),
+    );
+    return (fromUrl ?? CONTACT_INTERESTS[0]).label;
+  });
   const [rateLimited, setRateLimited] = useState(false);
   const [submitted, setSubmitted] = useState(false);
   const mutation = useSubmitContact();

@@ -74,13 +74,13 @@ const JahiSection = () => (
 
           <div className="flex flex-col gap-3.5 sm:flex-row sm:items-center">
             <Link
-              to="/contact"
+              to="/contact?interest=jahi"
               className="rounded-full bg-gradient-to-br from-gold-300 to-gold-400 px-[30px] py-[15px] text-center text-[14.5px] font-bold text-forest-700"
             >
               Book a viewing →
             </Link>
             <Link
-              to="/contact"
+              to="/contact?interest=jahi"
               className="rounded-full border-[1.5px] border-white/45 px-[30px] py-[15px] text-center text-[14.5px] font-semibold text-white"
             >
               Request floor plans
