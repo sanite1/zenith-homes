@@ -2,7 +2,7 @@ import { DISTRICT_CARDS } from "@/data/contact-data";
 import { cn } from "@/lib/utils";
 
 const DistrictsStrip = () => (
-  <div className="mt-10 grid grid-cols-1 gap-6 md:grid-cols-3 lg:mt-14">
+  <div className="mt-10 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:mt-14 lg:grid-cols-4">
     {DISTRICT_CARDS.map((card) => {
       const flagship = card.tone === "selling";
       return (

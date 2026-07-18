@@ -4,6 +4,7 @@ export interface ContactInterest {
 }
 
 export const CONTACT_INTERESTS: ContactInterest[] = [
+  { id: "jahi", label: "The Dream Home, Jahi · now selling" },
   { id: "kado", label: "Kado Homes · now selling" },
   { id: "idu", label: "Idu Estate · register interest" },
   { id: "guzape", label: "Guzape Terraces · waitlist" },
@@ -19,6 +20,13 @@ export interface DistrictCard {
 }
 
 export const DISTRICT_CARDS: DistrictCard[] = [
+  {
+    id: "jahi",
+    district: "JAHI",
+    title: "The Dream Home · now selling",
+    blurb: "4 units of 4-bed terraces · shell ₦230M · finished ₦280M",
+    tone: "selling",
+  },
   {
     id: "guzape",
     district: "GUZAPE",
