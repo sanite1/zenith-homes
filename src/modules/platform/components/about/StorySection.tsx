@@ -36,9 +36,9 @@ const StorySection = () => (
           innovation, luxury and trust, with a promise that every space we
           build is not brick and mortar, but a masterpiece carefully designed
           to inspire and nurture the lives within. From our first terraces in
-          Guzape to The Dream Home rising in Jahi and the estates coming up in
-          Idu and Kado, we build for families who measure a home in decades,
-          not transactions.
+          Guzape to the Jahi Zenith Homes Terrace rising today and the estates
+          coming up in Idu and Kado, we build for families who measure a home
+          in decades, not transactions.
         </p>
         <div className="mt-8 grid grid-cols-3 border-t border-forest-700/12 pt-[26px] sm:flex sm:gap-10">
           {ABOUT_STATS.map((stat) => (
