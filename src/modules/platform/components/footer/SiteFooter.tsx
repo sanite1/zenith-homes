@@ -7,7 +7,7 @@ import { FOOTER_EXPLORE_LINKS, SITE_CONTACT } from "@/data/site-data";
 const contactLines = [
   { icon: Phone, text: SITE_CONTACT.phones.join(" · ") },
   { icon: Mail, text: SITE_CONTACT.emails[0] },
-  { icon: MapPin, text: "No 2 Ubiaja Crescent, Garki, Abuja" },
+  { icon: MapPin, text: "No 3 Hamza Sakwa Cl, Guzape, Abuja" },
   { icon: Clock, text: SITE_CONTACT.hours[0] },
 ];
 

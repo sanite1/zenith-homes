@@ -3,7 +3,7 @@ import { SITE_CONTACT } from "@/data/site-data";
 import SocialLinks from "@/components/shared/SocialLinks";
 
 const MAPS_URL =
-  "https://www.google.com/maps/search/?api=1&query=No+2+Ubiaja+Crescent+Garki+Abuja";
+  "https://www.google.com/maps/search/?api=1&query=No+3+Hamza+Sakwa+Cl+Guzape+Abuja";
 const WHATSAPP_URL = "https://wa.me/2348146628362";
 
 const ContactDetails = () => (

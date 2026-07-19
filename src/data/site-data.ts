@@ -23,7 +23,7 @@ export interface SiteContact {
 export const SITE_CONTACT: SiteContact = {
   phones: ["0814 662 8362", "0816 324 3281"],
   emails: ["Info@zenithhomesafrica.com", "Sales@zenithhomesafrica.com"],
-  address: ["No 2 Ubiaja Crescent,", "Garki, Abuja, Nigeria"],
+  address: ["No 3 Hamza Sakwa Cl,", "Guzape, Abuja, Nigeria"],
   hours: ["Mon to Sat · 9am to 5pm", "Site visits by appointment"],
   rc: "RC 8642300",
 };

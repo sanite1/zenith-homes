@@ -9,7 +9,7 @@ export default function Contact() {
     <main>
       <PageMeta
         title="Contact | Zenith Homes and Apartments"
-        description="Begin the climb: book a site visit, request price lists and payment plans, or reach Zenith Homes directly in Garki, Abuja."
+        description="Begin the climb: book a site visit, request price lists and payment plans, or reach Zenith Homes directly in Guzape, Abuja."
       />
       <ContactHeader />
       <div className="relative z-[4] mx-auto -mt-[60px] max-w-[1168px] px-4 pb-[90px] sm:px-6 lg:px-0">

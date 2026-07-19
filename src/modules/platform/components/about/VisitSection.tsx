@@ -3,7 +3,7 @@ import { SITE_CONTACT } from "@/data/site-data";
 
 const visitChips = [
   "MON TO SAT · 9AM TO 5PM",
-  "⌖ NO 2 UBIAJA CRESCENT, GARKI",
+  "⌖ NO 3 HAMZA SAKWA CL, GUZAPE",
   "SITE VISITS BY APPOINTMENT",
 ];
 
