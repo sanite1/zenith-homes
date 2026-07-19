@@ -9,9 +9,9 @@ const guzape = PROJECT_CHAPTERS.find((c) => c.id === "guzape")!;
 const GuzapeSection = () => (
   <section
     id="guzape"
-    className="mx-auto max-w-[1168px] scroll-mt-24 px-5 pt-16 pb-10 sm:px-6 lg:px-0"
+    className="mx-auto max-w-[1168px] scroll-mt-24 px-4 pt-16 pb-10 sm:px-6 lg:px-0"
   >
-    <div className="grid grid-cols-1 items-start gap-14 lg:grid-cols-[1.15fr_1fr]">
+    <div className="grid grid-cols-1 items-start gap-10 rounded-[28px] bg-white p-5 ring-1 ring-forest-700/[.08] shadow-[0_24px_60px_rgba(18,51,23,.08)] sm:p-8 lg:grid-cols-[1.15fr_1fr] lg:gap-14 lg:p-10">
       <div className="relative">
         <img loading="lazy"
           src={photoExterior}

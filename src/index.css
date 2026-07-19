@@ -66,6 +66,30 @@ textarea::placeholder {
   color: var(--color-ink-300);
 }
 
+/* CTA micro-interactions: every link and button eases, and the primary
+   pills lift with a soft glow on hover. */
+a,
+button {
+  transition:
+    transform 0.22s ease,
+    box-shadow 0.22s ease,
+    background-color 0.22s ease,
+    color 0.22s ease,
+    border-color 0.22s ease,
+    opacity 0.22s ease;
+}
+
+a[class*="from-gold-300"]:hover,
+button[class*="from-gold-300"]:not(:disabled):hover {
+  transform: translateY(-2px);
+  box-shadow: 0 14px 30px rgba(233, 169, 29, 0.38);
+}
+
+a[class*="bg-forest-700"][class*="rounded-full"]:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 14px 30px rgba(18, 51, 23, 0.3);
+}
+
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;

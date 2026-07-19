@@ -7,9 +7,9 @@ const idu = PROJECT_CHAPTERS.find((c) => c.id === "idu")!;
 const IduSection = () => (
   <section
     id="idu"
-    className="mx-auto max-w-[1168px] scroll-mt-24 px-5 pt-[46px] pb-20 sm:px-6 lg:px-0"
+    className="mx-auto max-w-[1168px] scroll-mt-24 px-4 pt-[46px] pb-20 sm:px-6 lg:px-0"
   >
-    <div className="grid grid-cols-1 items-start gap-14 lg:grid-cols-[1fr_1.15fr]">
+    <div className="grid grid-cols-1 items-start gap-10 rounded-[28px] bg-white p-5 ring-1 ring-forest-700/[.08] shadow-[0_24px_60px_rgba(18,51,23,.08)] sm:p-8 lg:grid-cols-[1fr_1.15fr] lg:gap-14 lg:p-10">
       <div className="max-lg:order-2">
         <div className="mb-[18px] flex items-center gap-4">
           <div className="relative h-12 w-[88px] border-b-2 border-gold-500">

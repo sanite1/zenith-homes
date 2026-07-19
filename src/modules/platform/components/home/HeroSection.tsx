@@ -51,6 +51,8 @@ const HeroSection = () => {
         />
       ))}
       <div className="absolute inset-0 bg-[linear-gradient(102deg,rgba(8,24,12,.82)_0%,rgba(8,24,12,.55)_34%,rgba(8,24,12,.12)_60%,rgba(8,24,12,0)_76%),linear-gradient(rgba(8,24,12,.38)_0%,rgba(8,24,12,0)_26%,rgba(8,24,12,0)_78%,rgba(8,24,12,.30)_100%)]" />
+      {/* Mobile: photos sit right behind the copy, so deepen the scrim */}
+      <div className="absolute inset-0 bg-forest-950/35 lg:hidden" />
 
     <div className="relative z-[3] mx-auto h-full max-w-[1168px] px-5 sm:px-6 lg:px-0">
       <div className="inline-flex items-center gap-[9px] rounded-full border border-white/25 bg-forest-950/55 px-[18px] py-[9px] text-xs font-semibold tracking-[0.14em] text-white backdrop-blur-[6px] max-lg:mt-28 lg:absolute lg:top-[118px] lg:right-0">
@@ -85,7 +87,7 @@ const HeroSection = () => {
       <div className="relative z-10 mx-auto -mt-24 max-w-[1168px] px-4 sm:px-6 lg:-mt-[140px] lg:flex lg:justify-center lg:px-0">
         <Link
           to="/projects"
-          className="flex flex-col rounded-3xl bg-white p-2 shadow-[0_24px_60px_rgba(8,24,12,.25)] lg:flex-row lg:items-center lg:rounded-full"
+          className="group flex flex-col rounded-3xl bg-white p-2 shadow-[0_24px_60px_rgba(8,24,12,.25)] transition-[transform,box-shadow] duration-300 hover:-translate-y-1 hover:shadow-[0_32px_80px_rgba(8,24,12,.35)] lg:flex-row lg:items-center lg:rounded-full"
         >
           {pillCells.map((cell, i) => (
             <span
@@ -105,7 +107,7 @@ const HeroSection = () => {
               </span>
             </span>
           ))}
-          <span className="mt-1 block rounded-full bg-gradient-to-br from-gold-300 to-gold-400 px-8 py-[15px] text-center text-[15px] font-bold whitespace-nowrap text-forest-700 lg:mt-0">
+          <span className="mt-1 block rounded-full bg-gradient-to-br from-gold-300 to-gold-400 px-8 py-[15px] text-center text-[15px] font-bold whitespace-nowrap text-forest-700 transition-shadow duration-300 group-hover:shadow-[0_10px_26px_rgba(233,169,29,.5)] lg:mt-0">
             Find my home
           </span>
         </Link>
