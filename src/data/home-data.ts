@@ -37,7 +37,7 @@ export const SUN_PATH_CARDS: SunPathCard[] = [
     badge: "DAYBREAK · NOW SELLING",
     badgeTone: "selling",
     image: "jahi",
-    flagship: false,
+    flagship: true,
     cta: { label: "PAYMENT PLANS →", to: "/projects#jahi" },
   },
   {

@@ -89,29 +89,15 @@ const DistrictCard = ({ card }: { card: SunPathCard }) => (
       >
         {card.blurb}
       </p>
-      {card.flagship ? (
-        <div className="mt-3.5 flex flex-wrap gap-2.5">
-          <Link
-            to={`/contact?interest=${card.id}`}
-            className="rounded-full bg-gradient-to-br from-gold-300 to-gold-400 px-4 py-2.5 text-[12px] font-bold text-forest-700"
-          >
-            Book a viewing
-          </Link>
-          <Link
-            to={`/projects#${card.id}`}
-            className="rounded-full border border-white/40 px-4 py-2.5 text-[12px] font-semibold text-white"
-          >
-            Payment plans
-          </Link>
-        </div>
-      ) : (
-        <Link
-          to={card.cta.to}
-          className="mt-3 inline-block w-fit border-b-[1.5px] border-gold-400 pb-[3px] text-[13.5px] font-semibold text-forest-700"
-        >
-          {card.cta.label}
-        </Link>
-      )}
+      <Link
+        to={card.cta.to}
+        className={cn(
+          "mt-3 inline-block w-fit border-b-[1.5px] border-gold-400 pb-[3px] text-[13.5px] font-semibold",
+          card.flagship ? "text-gold-300" : "text-forest-700",
+        )}
+      >
+        {card.cta.label}
+      </Link>
     </div>
   </article>
 );
