@@ -18,7 +18,7 @@ const SLIDE_MS = 6000;
 
 const pillCells = [
   { label: "DISTRICT", value: "Jahi · Guzape · Kado · Idu" },
-  { label: "HOME TYPE", value: "Terrace, Apartment..." },
+  { label: "HOME TYPE", value: "Terrace, Duplex..." },
   { label: "STATUS", value: "Now selling" },
 ];
 
@@ -71,8 +71,9 @@ const HeroSection = () => {
           </span>
         </h1>
         <p className="mt-6 max-w-[500px] text-[15px] leading-[1.7] text-white/95 [text-shadow:0_1px_18px_rgba(8,24,12,.55)] sm:text-[17px]">
-          We build it: luxury apartments and family homes across Jahi, Guzape,
-          Idu and Kado, finished to the last detail and kept for generations.
+          We build it: luxury terraces, duplexes and family homes across
+          Jahi, Guzape, Idu and Kado, finished to the last detail and kept
+          for generations.
         </p>
       </div>
 

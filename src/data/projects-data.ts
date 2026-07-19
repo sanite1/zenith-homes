@@ -64,15 +64,15 @@ export const PROJECT_CHAPTERS: ProjectChapter[] = [
     anchorLabel: "03 · KADO · NOW SELLING",
     sunLabel: "HIGH NOON",
     name: "Kado Homes",
-    tagline: "Refined city apartments at the sun's height.",
+    tagline: "One fully detached duplex at the sun's height.",
     description:
-      "One to three bedroom apartments with designer kitchens, marble-calm bathrooms and smart-home control as standard. Open-plan living drawn around Abuja light. Selling now, finishing soon.",
-    tags: ["1–3 bedrooms", "Smart-home", "Designer kitchens", "Instalment plans"],
+      "A single fully detached 7-bedroom duplex in Kado: bold modern lines, generous living volumes and private gated grounds, with room for a large family to live fully. One home only, selling now.",
+    tags: ["Fully detached", "7 bedrooms", "1 unit only", "Private grounds"],
     badge: "NOW SELLING",
     flagship: true,
     glance: {
       heading: "03 · KADO",
-      blurb: "1–3 bed apartments · now selling · instalment plans",
+      blurb: "Fully detached 7-bed duplex · now selling",
       ctaLabel: "BOOK A VIEWING →",
     },
   },
@@ -146,7 +146,10 @@ export const PORTFOLIO_TYPES: PortfolioType[] = [
       "Private balconies, city or garden views",
       "24-hour security and concierge services",
     ],
-    liveIt: { label: "LIVE IT IN KADO →", anchor: "#kado" },
+    liveIt: {
+      label: "ENQUIRE ABOUT APARTMENTS →",
+      anchor: "/contact?interest=other",
+    },
     highlight: false,
   },
   {
@@ -162,7 +165,7 @@ export const PORTFOLIO_TYPES: PortfolioType[] = [
       "Smart home technology for seamless living",
       "Energy-efficient systems, sustainable materials",
     ],
-    liveIt: { label: "LIVE IT IN JAHI →", anchor: "#jahi" },
+    liveIt: { label: "LIVE IT IN KADO →", anchor: "#kado" },
     highlight: true,
   },
   {

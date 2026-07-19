@@ -10,7 +10,7 @@ export default function Home() {
     <main>
       <PageMeta
         title="Zenith Homes and Apartments · Peak of Excellence"
-        description="Luxury apartments and family homes across Guzape, Idu and Kado, Abuja. Every home has a zenith: we build it."
+        description="Luxury terraces, duplexes and family homes across Jahi, Guzape, Idu and Kado, Abuja. Every home has a zenith: we build it."
       />
       <HeroSection />
       <SunPathSection />

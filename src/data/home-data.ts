@@ -23,7 +23,7 @@ export const SUN_PATH_CARDS: SunPathCard[] = [
   {
     id: "kado",
     name: "Kado Homes",
-    blurb: "Kado · 1–3 bed luxury apartments, smart-home standard",
+    blurb: "Kado · one fully detached 7-bed duplex",
     badge: "HIGH NOON · NOW SELLING",
     badgeTone: "selling",
     image: "kado",

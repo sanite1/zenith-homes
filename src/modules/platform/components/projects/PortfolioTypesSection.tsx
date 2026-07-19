@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { Building2, Gem, Trees } from "lucide-react";
 import { PORTFOLIO_TYPES, type PortfolioType } from "@/data/projects-data";
 import { SITE_CONTACT } from "@/data/site-data";
@@ -78,15 +79,27 @@ const PortfolioTypesSection = () => (
                   </li>
                 ))}
               </ul>
-              <a
-                href={type.liveIt.anchor}
-                className={cn(
-                  "w-fit border-b-[1.5px] border-gold-400 pb-[3px] text-[12.5px] font-bold",
-                  type.highlight ? "text-gold-300" : "text-forest-700",
-                )}
-              >
-                {type.liveIt.label}
-              </a>
+              {type.liveIt.anchor.startsWith("#") ? (
+                <a
+                  href={type.liveIt.anchor}
+                  className={cn(
+                    "w-fit border-b-[1.5px] border-gold-400 pb-[3px] text-[12.5px] font-bold",
+                    type.highlight ? "text-gold-300" : "text-forest-700",
+                  )}
+                >
+                  {type.liveIt.label}
+                </a>
+              ) : (
+                <Link
+                  to={type.liveIt.anchor}
+                  className={cn(
+                    "w-fit border-b-[1.5px] border-gold-400 pb-[3px] text-[12.5px] font-bold",
+                    type.highlight ? "text-gold-300" : "text-forest-700",
+                  )}
+                >
+                  {type.liveIt.label}
+                </Link>
+              )}
             </article>
           );
         })}
