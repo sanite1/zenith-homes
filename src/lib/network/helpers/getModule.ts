@@ -11,5 +11,5 @@ export const getModule = (): AppModule => {
   }
   if (hostname.startsWith("app.")) return "app";
   if (hostname.startsWith("admin.")) return "admin";
-  return "platform"; // zenithhomesltd.com / www.zenithhomesltd.com
+  return "platform"; // zenithhomesafrica.com / www.zenithhomesafrica.com
 };

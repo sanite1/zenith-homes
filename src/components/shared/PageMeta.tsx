@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import { useLocation } from "react-router-dom";
 
-const SITE_URL = "https://www.zenithhomesltd.com";
+const SITE_URL = "https://zenithhomesafrica.com";
 
 const setMeta = (
   attr: "name" | "property",
