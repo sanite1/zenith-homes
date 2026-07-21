@@ -20,8 +20,8 @@ const VisitSection = () => (
         </h2>
         <p className="mt-[18px] max-w-[520px] text-[14.5px] leading-[1.85] text-[#6b6353]">
           Every claim on this page survives an inspection. Book a site visit
-          to The Dream Home in Jahi or Kado Homes, both selling now, and judge
-          the build quality with your own eyes.
+          to The Dream Home in Jahi, selling now, and judge the build quality
+          with your own eyes.
         </p>
         <div className="mt-[26px] flex flex-wrap gap-2.5">
           {visitChips.map((chip) => (
@@ -46,7 +46,7 @@ const VisitSection = () => (
             {
               step: "01",
               title: "Choose a project",
-              detail: "Jahi or Kado, both now selling",
+              detail: "The Dream Home, Jahi · now selling",
             },
             {
               step: "02",

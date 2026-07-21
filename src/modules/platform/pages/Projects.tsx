@@ -12,7 +12,7 @@ export default function Projects() {
     <main>
       <PageMeta
         title="Projects | Zenith Homes and Apartments"
-        description="The Dream Home in Jahi now selling, Zenith Terraces delivered in Guzape, Kado Homes selling, Idu Estate rising: four points on the sun's climb across Abuja."
+        description="The Dream Home in Jahi now selling, Zenith Terraces delivered in Guzape, Kado Homes sold, Idu Estate rising: four points on the sun's climb across Abuja."
       />
       <ProjectsHeader />
       <JahiSection />

@@ -61,19 +61,19 @@ export const PROJECT_CHAPTERS: ProjectChapter[] = [
   {
     id: "kado",
     chapter: "CHAPTER 03 · KADO",
-    anchorLabel: "03 · KADO · NOW SELLING",
+    anchorLabel: "03 · KADO · SOLD",
     sunLabel: "HIGH NOON",
     name: "Kado Homes",
     tagline: "One fully detached duplex at the sun's height.",
     description:
-      "A single fully detached 7-bedroom duplex in Kado: bold modern lines, generous living volumes and private gated grounds, with room for a large family to live fully. One home only, selling now.",
+      "A single fully detached 7-bedroom duplex in Kado: bold modern lines, generous living volumes and private gated grounds, with room for a large family to live fully. One home only, and it has found its family.",
     tags: ["Fully detached", "7 bedrooms", "1 unit only", "Private grounds"],
-    badge: "NOW SELLING",
+    badge: "SOLD",
     flagship: true,
     glance: {
       heading: "03 · KADO",
-      blurb: "Fully detached 7-bed duplex · now selling",
-      ctaLabel: "BOOK A VIEWING →",
+      blurb: "Fully detached 7-bed duplex · sold",
+      ctaLabel: "SEE THE STORY →",
     },
   },
   {
@@ -109,8 +109,8 @@ export const JAHI_PRICING: JahiPricingOption[] = [
     id: "carcass",
     label: "SHELL CARCASS",
     price: "₦230M",
-    note: "Without exterior finish",
-    planLines: ["30% down payment", "Balance within 8 months"],
+    note: "With exterior finish",
+    planLines: ["30% down payment", "Balance within 10 months"],
   },
   {
     id: "finished",
@@ -165,7 +165,7 @@ export const PORTFOLIO_TYPES: PortfolioType[] = [
       "Smart home technology for seamless living",
       "Energy-efficient systems, sustainable materials",
     ],
-    liveIt: { label: "LIVE IT IN KADO →", anchor: "#kado" },
+    liveIt: { label: "SEE IT IN KADO →", anchor: "#kado" },
     highlight: true,
   },
   {

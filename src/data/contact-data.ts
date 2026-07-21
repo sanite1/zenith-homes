@@ -5,7 +5,7 @@ export interface ContactInterest {
 
 export const CONTACT_INTERESTS: ContactInterest[] = [
   { id: "jahi", label: "The Dream Home, Jahi · now selling" },
-  { id: "kado", label: "Kado Homes · now selling" },
+  { id: "kado", label: "Homes like Kado · enquire" },
   { id: "idu", label: "Idu Estate · register interest" },
   { id: "guzape", label: "Guzape Terraces · waitlist" },
   { id: "payment-plans", label: "Payment plans" },
@@ -39,8 +39,8 @@ export const DISTRICT_CARDS: DistrictCard[] = [
     id: "kado",
     district: "KADO",
     title: "Kado Homes",
-    blurb: "Now selling · private tours by appointment",
-    tone: "selling",
+    blurb: "Sold · one fully detached 7-bed duplex",
+    tone: "delivered",
   },
   {
     id: "idu",

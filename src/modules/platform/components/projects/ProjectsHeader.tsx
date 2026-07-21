@@ -11,7 +11,7 @@ const CHAPTER_META: Record<
 > = {
   jahi: { image: photoJahi, status: "Now selling", tone: "selling" },
   guzape: { image: photoExterior, status: "Delivered 2025", tone: "delivered" },
-  kado: { image: photoKado, status: "Now selling", tone: "selling" },
+  kado: { image: photoKado, status: "Sold", tone: "delivered" },
   idu: { image: photoIdu, status: "Rising", tone: "rising" },
 };
 

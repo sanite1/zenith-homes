@@ -57,7 +57,7 @@ const HeroSection = () => {
     <div className="relative z-[3] mx-auto h-full max-w-[1168px] px-5 sm:px-6 lg:px-0">
       <div className="inline-flex items-center gap-[9px] rounded-full border border-white/25 bg-forest-950/55 px-[18px] py-[9px] text-xs font-semibold tracking-[0.14em] text-white backdrop-blur-[6px] max-lg:mt-28 lg:absolute lg:top-[118px] lg:right-0">
         <span className="h-2 w-2 rounded-full bg-flame-500 shadow-[0_0_8px_rgba(232,64,31,.9)]" />
-        NOW SELLING · JAHI & KADO, ABUJA
+        NOW SELLING · JAHI, ABUJA
       </div>
 
       <div className="mt-8 max-w-[760px] text-white lg:absolute lg:top-[196px] lg:left-0 lg:mt-0">

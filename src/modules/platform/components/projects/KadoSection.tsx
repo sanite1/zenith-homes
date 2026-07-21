@@ -25,8 +25,8 @@ const KadoSection = () => (
               {kado.chapter}
             </div>
           </div>
-          <div className="mb-[18px] inline-flex items-center gap-2 rounded-full bg-flame-500 px-[15px] py-[7px] text-[11px] font-bold tracking-[0.12em]">
-            <span className="h-[7px] w-[7px] rounded-full bg-white" />
+          <div className="mb-[18px] inline-flex items-center gap-2 rounded-full bg-gradient-to-br from-gold-300 to-gold-400 px-[15px] py-[7px] text-[11px] font-bold tracking-[0.12em] text-forest-800">
+            <span className="h-[7px] w-[7px] rounded-full bg-forest-800" />
             {kado.badge}
           </div>
           <h2 className="text-[clamp(32px,4vw,44px)] leading-[1.1] font-bold">
@@ -49,17 +49,17 @@ const KadoSection = () => (
             ))}
           </div>
           <div className="flex flex-col gap-3.5 sm:flex-row sm:items-center">
-            <Link
-              to="/contact?interest=kado"
+            <a
+              href="#jahi"
               className="rounded-full bg-gradient-to-br from-gold-300 to-gold-400 px-[30px] py-[15px] text-center text-[14.5px] font-bold text-forest-700"
             >
-              Book a viewing →
-            </Link>
+              See what's selling in Jahi →
+            </a>
             <Link
               to="/contact?interest=kado"
               className="rounded-full border-[1.5px] border-white/45 px-[30px] py-[15px] text-center text-[14.5px] font-semibold text-white"
             >
-              Request price list
+              Enquire about homes like this
             </Link>
           </div>
         </div>
