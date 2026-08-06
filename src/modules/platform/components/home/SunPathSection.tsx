@@ -67,7 +67,7 @@ const DistrictCard = ({ card }: { card: SunPathCard }) => (
   >
     <div className="relative">
       <img
-        loading="lazy"
+        loading="lazy" decoding="async"
         src={IMAGE_MAP[card.image]}
         alt={card.name}
         className="block h-[180px] w-full object-cover"

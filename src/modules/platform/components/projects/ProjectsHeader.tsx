@@ -106,6 +106,7 @@ const ProjectsHeader = () => (
           >
             <img
               src={meta.image}
+              decoding="async"
               alt={chapter.name}
               className="h-[52px] w-[52px] shrink-0 rounded-xl object-cover"
             />

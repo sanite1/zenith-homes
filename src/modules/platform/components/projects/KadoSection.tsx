@@ -64,12 +64,12 @@ const KadoSection = () => (
           </div>
         </div>
         <div className="relative min-h-[400px] lg:min-h-[620px]">
-          <img loading="lazy"
+          <img loading="lazy" decoding="async"
             src={photoKadoFront}
             alt="Kado Homes street elevation"
             className="absolute inset-x-0 top-0 h-[58%] w-full object-cover"
           />
-          <img loading="lazy"
+          <img loading="lazy" decoding="async"
             src={photoKadoAngle}
             alt="Kado Homes corner view"
             className="absolute inset-x-0 bottom-0 h-[42%] w-full object-cover"

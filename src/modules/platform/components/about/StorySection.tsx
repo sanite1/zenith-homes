@@ -7,7 +7,7 @@ const StorySection = () => (
   <section className="mx-auto max-w-[1168px] px-5 pt-16 pb-10 sm:px-6 lg:px-0 lg:pt-[76px]">
     <div className="grid grid-cols-1 items-start gap-16 lg:grid-cols-[1fr_1.1fr]">
       <div className="relative">
-        <img loading="lazy"
+        <img loading="lazy" decoding="async"
           src={photoIdu}
           alt="Zenith duplex, Idu"
           className="block h-[300px] w-full rounded-[22px] object-cover sm:h-[440px]"

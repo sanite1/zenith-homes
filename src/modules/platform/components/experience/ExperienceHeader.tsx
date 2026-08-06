@@ -32,6 +32,7 @@ const ExperienceHeader = () => (
           <div className="h-[400px] w-[440px] overflow-hidden rounded-t-[220px] rounded-b-3xl shadow-[0_30px_70px_rgba(6,16,9,.5)] ring-1 ring-gold-300/40">
             <img
               src={photoJahiSide}
+              fetchPriority="high"
               alt="Zenith terraces glowing at golden hour"
               className="h-full w-full object-cover object-[35%_60%]"
             />

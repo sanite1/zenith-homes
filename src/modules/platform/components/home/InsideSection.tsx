@@ -45,7 +45,7 @@ const InsideSection = () => {
         {INTERIOR_SLIDES.map((src, i) => (
           <img
             key={src}
-            loading="lazy"
+            loading="lazy" decoding="async"
             src={src}
             alt={i === slide ? "Inside a finished Zenith home" : ""}
             aria-hidden={i !== slide}

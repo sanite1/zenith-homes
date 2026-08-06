@@ -89,13 +89,13 @@ const JahiSection = () => (
         </div>
         <div className="relative min-h-[400px] lg:min-h-[680px]">
           <img
-            loading="lazy"
+            loading="lazy" decoding="async"
             src={photoJahiFront}
             alt="The Dream Home, Jahi: four 4-bed terraces at dusk"
             className="absolute inset-x-0 top-0 h-[55%] w-full object-cover"
           />
           <img
-            loading="lazy"
+            loading="lazy" decoding="async"
             src={photoJahiSide}
             alt="The Dream Home, Jahi: side elevation"
             className="absolute inset-x-0 bottom-0 h-[45%] w-full object-cover"

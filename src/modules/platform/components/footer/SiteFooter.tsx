@@ -46,7 +46,7 @@ const SiteFooter = () => (
               src={logoFull}
               alt="Zenith Homes and Apartments Ltd"
               className="h-auto w-[190px] brightness-110"
-              loading="lazy"
+              loading="lazy" decoding="async"
             />
           </Link>
           <p className="max-w-[340px] text-[13.5px] leading-[1.9] text-sage-500">

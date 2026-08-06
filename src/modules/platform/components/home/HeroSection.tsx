@@ -42,7 +42,8 @@ const HeroSection = () => {
           src={s.src}
           alt={i === slide ? s.alt : ""}
           fetchPriority={i === 0 ? "high" : undefined}
-          loading={i === 0 ? undefined : "lazy"}
+          loading={i === 0 ? "eager" : "lazy"}
+          decoding={i === 0 ? "auto" : "async"}
           aria-hidden={i !== slide}
           className={cn(
             "absolute inset-0 h-full w-full object-cover object-[50%_42%] transition-[opacity,transform] duration-[1600ms] ease-out",

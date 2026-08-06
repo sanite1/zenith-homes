@@ -58,7 +58,7 @@ const IduSection = () => (
         </Link>
       </div>
       <div className="relative max-lg:order-1">
-        <img loading="lazy"
+        <img loading="lazy" decoding="async"
           src={photoIdu}
           alt="Idu Estate duplexes"
           className="block h-[320px] w-full rounded-[22px] object-cover sm:h-[520px]"

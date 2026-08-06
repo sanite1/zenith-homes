@@ -5,7 +5,7 @@ const PromiseSection = () => (
   <section className="mx-auto max-w-[1168px] px-5 pt-2 pb-20 sm:px-6 lg:px-0 lg:pb-[90px]">
     <div className="grid grid-cols-1 gap-6 lg:grid-cols-2">
       <div className="relative min-h-[320px] overflow-hidden rounded-3xl sm:min-h-[420px]">
-        <img loading="lazy"
+        <img loading="lazy" decoding="async"
           src={photoLiving}
           alt="Zenith living room"
           className="absolute inset-0 h-full w-full object-cover"

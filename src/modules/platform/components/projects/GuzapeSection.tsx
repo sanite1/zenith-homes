@@ -13,7 +13,7 @@ const GuzapeSection = () => (
   >
     <div className="grid grid-cols-1 items-start gap-10 rounded-[28px] bg-white p-5 ring-1 ring-forest-700/[.08] shadow-[0_24px_60px_rgba(18,51,23,.08)] sm:p-8 lg:grid-cols-[1.15fr_1fr] lg:gap-14 lg:p-10">
       <div className="relative">
-        <img loading="lazy"
+        <img loading="lazy" decoding="async"
           src={photoExterior}
           alt="Zenith Terraces, Guzape"
           className="block h-[320px] w-full rounded-[22px] object-cover object-[50%_30%] sm:h-[520px]"
@@ -22,12 +22,12 @@ const GuzapeSection = () => (
           {guzape.badge}
         </div>
         <div className="absolute right-[18px] -bottom-[26px] flex gap-3">
-          <img loading="lazy"
+          <img loading="lazy" decoding="async"
             src={photoKitchen}
             alt="Interior"
             className="h-[86px] w-[120px] rounded-xl border-4 border-white object-cover shadow-[0_12px_30px_rgba(8,24,12,.25)] max-sm:h-[64px] max-sm:w-[90px]"
           />
-          <img loading="lazy"
+          <img loading="lazy" decoding="async"
             src={photoLiving}
             alt="Living room"
             className="h-[86px] w-[120px] rounded-xl border-4 border-white object-cover shadow-[0_12px_30px_rgba(8,24,12,.25)] max-sm:h-[64px] max-sm:w-[90px]"
